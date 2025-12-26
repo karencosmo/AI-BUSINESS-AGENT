@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Business Decision Agent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AI Business Decision Agent</h1>
+
+    <form id="decisionForm">
+      <label>What are you launching?</label>
+      <select id="businessType" required>
+        <option value="">Select</option>
+        <option value="Product">Product</option>
+        <option value="Service">Service</option>
+        <option value="App">App</option>
+        <option value="Business">Business</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label>Initial Investment ($)</label>
+      <input type="number" id="investment" required>
+
+      <label>Expected Monthly Revenue ($)</label>
+      <input type="number" id="revenue" required>
+
+      <label>Time to First Revenue (months)</label>
+      <input type="number" id="timeline" required>
+
+      <label>Risk Tolerance</label>
+      <select id="risk" required>
+        <option value="">Select</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+
+      <button type="submit">Get Decision</button>
+    </form>
+
+    <div id="output">
+      <h2>Decision:</h2>
+      <p id="decisionText"></p>
+      <h3>Confidence Score:</h3>
+      <p id="confidence"></p>
+      <h3>Reasons:</h3>
+      <ul id="reasonsList"></ul>
+      <h3>Next Actions:</h3>
+      <ul id="actionsList"></ul>
+      <button id="copyButton">Copy Result</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
